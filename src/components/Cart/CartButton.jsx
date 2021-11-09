@@ -1,11 +1,18 @@
 import React from 'react';
 import { Badge, ButtonCart } from './CartButton.styled';
-
+import { uiActions } from '../../store/ui-slice';
+import { useDispatch, useSelector } from 'react-redux';
 const CartButton = () => {
+  const dispatch = useDispatch();
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+  const toggleHandler = () => {
+    dispatch(uiActions.toggle());
+  };
+
   return (
-    <ButtonCart>
+    <ButtonCart onClick={toggleHandler}>
       <span>My Cart</span>
-      <Badge>1</Badge>
+      <Badge>{totalQuantity}</Badge>
     </ButtonCart>
   );
 };
