@@ -30,8 +30,7 @@ const CartItem = (props) => {
       <header>
         <h3>{title}</h3>
         <Price>
-          ${total.toFixed(2)}{' '}
-          <ItemPriceSpan>(${price.toFixed(2)}/item)</ItemPriceSpan>
+          Rs. {total} <ItemPriceSpan>(Rs. {price}/item)</ItemPriceSpan>
         </Price>
       </header>
       <Details>
