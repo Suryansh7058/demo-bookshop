@@ -28,7 +28,7 @@ const ProductItem = (props) => {
       <Card>
         <header>
           <h3>{title}</h3>
-          <ProductPrice>${price.toFixed(2)}</ProductPrice>
+          <ProductPrice>Rs. {price}</ProductPrice>
         </header>
         <p>{description}</p>
         <ProductActions>
